@@ -34,7 +34,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="64A-Nt-j59">
-                                <rect key="frame" x="0.0" y="144" width="414" height="718"/>
+                                <rect key="frame" x="0.0" y="144" width="414" height="752"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="SfJ-kg-4A0"/>
@@ -48,7 +48,7 @@
                             <constraint firstItem="64A-Nt-j59" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="5hI-Eq-9QA"/>
                             <constraint firstItem="64A-Nt-j59" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7Ad-P1-Aee"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="64A-Nt-j59" secondAttribute="trailing" id="I6v-yK-k1s"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="64A-Nt-j59" secondAttribute="bottom" id="ZU0-2d-ad1"/>
+                            <constraint firstAttribute="bottom" secondItem="64A-Nt-j59" secondAttribute="bottom" id="ZU0-2d-ad1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="News" largeTitleDisplayMode="always" id="gXF-ZV-Zgk"/>
@@ -58,7 +58,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="102" y="4"/>
+            <point key="canvasLocation" x="101.44927536231884" y="3.3482142857142856"/>
         </scene>
     </scenes>
     <resources>

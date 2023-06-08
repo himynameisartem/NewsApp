@@ -8,9 +8,7 @@
 import Foundation
 
 struct News: Codable {
-    
     let articles: [Articles]
-    
 }
 
  struct Articles: Codable {
