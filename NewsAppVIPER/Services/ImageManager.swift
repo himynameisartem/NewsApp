@@ -11,10 +11,14 @@ class ImageManager {
     
     static let shared = ImageManager()
     
-    func getImageData(from imageURL: String?) -> Data? {
-        guard let stringURL = imageURL else { return nil }
-        guard let imageURL = URL(string: stringURL) else { return nil }
-        guard let imageData = try? Data(contentsOf: imageURL) else { return nil }
-        return imageData
+    func loadImageFromURL(url: URL, completion: @escaping (UIImage?) -> Void) {
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard let data = data, error == nil else {
+                completion(nil)
+                return
+            }
+            let image = UIImage(data: data)
+            completion(image)
+        }.resume()
     }
 }

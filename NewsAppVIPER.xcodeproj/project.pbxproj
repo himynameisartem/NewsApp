@@ -26,7 +26,6 @@
 		31762C8A2A31ED2300651F7D /* NewsListInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31762C892A31ED2300651F7D /* NewsListInteractorProtocol.swift */; };
 		31762C8D2A31F10C00651F7D /* NewsListConfiguratorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31762C8C2A31F10C00651F7D /* NewsListConfiguratorProtocol.swift */; };
 		31762C902A31F44B00651F7D /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31762C8F2A31F44B00651F7D /* ImageManager.swift */; };
-		31762C922A31F62C00651F7D /* ImageQality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31762C912A31F62C00651F7D /* ImageQality.swift */; };
 		E4F5223974809AEBF14B71AB /* Pods_NewsAppVIPER.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE07DD23B40827991E996917 /* Pods_NewsAppVIPER.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,7 +51,6 @@
 		31762C892A31ED2300651F7D /* NewsListInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListInteractorProtocol.swift; sourceTree = "<group>"; };
 		31762C8C2A31F10C00651F7D /* NewsListConfiguratorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListConfiguratorProtocol.swift; sourceTree = "<group>"; };
 		31762C8F2A31F44B00651F7D /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
-		31762C912A31F62C00651F7D /* ImageQality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageQality.swift; sourceTree = "<group>"; };
 		6AF1BADEE9B3841262FE4FBC /* Pods-NewsAppVIPER.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsAppVIPER.release.xcconfig"; path = "Target Support Files/Pods-NewsAppVIPER/Pods-NewsAppVIPER.release.xcconfig"; sourceTree = "<group>"; };
 		8A3B4B5BD519B5D3038868D8 /* Pods-NewsAppVIPER.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsAppVIPER.debug.xcconfig"; path = "Target Support Files/Pods-NewsAppVIPER/Pods-NewsAppVIPER.debug.xcconfig"; sourceTree = "<group>"; };
 		EE07DD23B40827991E996917 /* Pods_NewsAppVIPER.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewsAppVIPER.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,7 +153,6 @@
 			children = (
 				31762C792A31073400651F7D /* NetworkManager.swift */,
 				31762C8F2A31F44B00651F7D /* ImageManager.swift */,
-				31762C912A31F62C00651F7D /* ImageQality.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -332,7 +329,6 @@
 				31762C7E2A31E9EA00651F7D /* NewsListIneractor.swift in Sources */,
 				31762C7A2A31073400651F7D /* NetworkManager.swift in Sources */,
 				31762C772A3102BD00651F7D /* News.swift in Sources */,
-				31762C922A31F62C00651F7D /* ImageQality.swift in Sources */,
 				31762C5E2A30FBA800651F7D /* NewsListViewController.swift in Sources */,
 				31762C6F2A30FC3E00651F7D /* NewsListCell.swift in Sources */,
 				31762C7C2A31E9DA00651F7D /* NewsListPresenter.swift in Sources */,
