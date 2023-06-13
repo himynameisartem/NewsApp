@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -20,7 +19,6 @@
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1uj-Zd-nBO">
                         <rect key="frame" x="15" y="15" width="120" height="120"/>
-                        <color key="backgroundColor" systemColor="systemTealColor"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="1uj-Zd-nBO" secondAttribute="height" multiplier="1:1" id="cmS-U1-5Ft"/>
                         </constraints>
@@ -42,8 +40,12 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="6Jf-Rt-3ow">
+                        <rect key="frame" x="65" y="65" width="20" height="20"/>
+                    </activityIndicatorView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="6Jf-Rt-3ow" firstAttribute="centerX" secondItem="1uj-Zd-nBO" secondAttribute="centerX" id="2Wl-4s-Fnn"/>
                     <constraint firstItem="w4H-zt-3eO" firstAttribute="leading" secondItem="1uj-Zd-nBO" secondAttribute="trailing" constant="15" id="4aU-Zn-mm0"/>
                     <constraint firstAttribute="trailing" secondItem="w4H-zt-3eO" secondAttribute="trailing" constant="15" id="9rO-GL-zjt"/>
                     <constraint firstItem="w4H-zt-3eO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="C0z-mq-DWC"/>
@@ -55,20 +57,17 @@
                     <constraint firstAttribute="trailing" secondItem="D2i-Ek-Pfn" secondAttribute="trailing" constant="15" id="eOS-6d-GJU"/>
                     <constraint firstAttribute="bottom" secondItem="1uj-Zd-nBO" secondAttribute="bottom" constant="15" id="lGN-e5-Fm4"/>
                     <constraint firstAttribute="bottom" secondItem="D2i-Ek-Pfn" secondAttribute="bottom" constant="15" id="p09-rX-dyz"/>
+                    <constraint firstItem="6Jf-Rt-3ow" firstAttribute="centerY" secondItem="1uj-Zd-nBO" secondAttribute="centerY" id="vkB-Jh-Mf6"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="dateNewsLabel" destination="D2i-Ek-Pfn" id="DK0-yb-3Bl"/>
+                <outlet property="loadImageActivityIndicator" destination="6Jf-Rt-3ow" id="cVd-eB-ES3"/>
                 <outlet property="newsImageView" destination="1uj-Zd-nBO" id="PBp-SN-6oI"/>
                 <outlet property="titleNewsLabel" destination="w4H-zt-3eO" id="CNf-2R-F0D"/>
             </connections>
             <point key="canvasLocation" x="-79.389312977099237" y="2.1126760563380285"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <systemColor name="systemTealColor">
-            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-    </resources>
 </document>

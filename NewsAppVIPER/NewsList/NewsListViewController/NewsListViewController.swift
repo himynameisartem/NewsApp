@@ -32,7 +32,7 @@ extension NewsListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! NewsListCell
         
-        guard let news = presenter.news(atIndex: indexPath) else { return NewsListCell() }
+        guard let news = presenter.news(atIndex: indexPath) else { return cell }
         
         cell.configure(news: news)
         
