@@ -12,10 +12,10 @@ class NewsListCofigurator: NewsListConfiguratorProtocol {
     func configure(with viewController: NewsListViewController) {
         let presenter = NewsListPresenter(view: viewController)
         let interactor = NewsListInteractor(presenter: presenter)
-//        let router = NewsListRouter(viewController: viewController)
+        let router = NewsListRouter(viewController: viewController)
         
         viewController.presenter = presenter
         presenter.interactor = interactor
-//        presenter.router = router
+        presenter.router = router
     }
 }

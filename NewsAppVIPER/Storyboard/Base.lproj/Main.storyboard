@@ -34,8 +34,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="64A-Nt-j59">
-                                <rect key="frame" x="0.0" y="144" width="414" height="752"/>
+                                <rect key="frame" x="0.0" y="92" width="414" height="804"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="sZQ-sk-hbq" customClass="NewsListCell" customModule="NewsAppVIPER" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sZQ-sk-hbq" id="o0K-P7-GFg">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="8K0-qx-kNx" kind="show" identifier="ShowDetail" id="Eus-OD-nk0"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="SfJ-kg-4A0"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="gB1-qr-oeG"/>
@@ -59,6 +72,63 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="101.44927536231884" y="3.3482142857142856"/>
+        </scene>
+        <!--News Detail View Controller-->
+        <scene sceneID="TZn-mf-JQc">
+            <objects>
+                <viewController id="8K0-qx-kNx" customClass="NewsDetailViewController" customModule="NewsAppVIPER" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QBO-sv-9LG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a76-Vp-lJb">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="365"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="365" id="C9g-xU-OOo"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" secondItem="a76-Vp-lJb" secondAttribute="height" multiplier="414:365" id="Zvq-lm-8Eh"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uIn-QE-pi1">
+                                <rect key="frame" x="20" y="385" width="374" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Cx9-BC-tN0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yr1-dU-ITX">
+                                <rect key="frame" x="20" y="436" width="374" height="406"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oTp-R0-vnm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oTp-R0-vnm" firstAttribute="trailing" secondItem="yr1-dU-ITX" secondAttribute="trailing" constant="20" id="G4j-8J-BEN"/>
+                            <constraint firstItem="uIn-QE-pi1" firstAttribute="leading" secondItem="oTp-R0-vnm" secondAttribute="leading" constant="20" id="MbR-AM-TdO"/>
+                            <constraint firstItem="a76-Vp-lJb" firstAttribute="leading" secondItem="oTp-R0-vnm" secondAttribute="leading" id="Vnh-j7-hKf"/>
+                            <constraint firstItem="yr1-dU-ITX" firstAttribute="leading" secondItem="oTp-R0-vnm" secondAttribute="leading" constant="20" id="WeK-s2-Ss9"/>
+                            <constraint firstItem="uIn-QE-pi1" firstAttribute="top" secondItem="a76-Vp-lJb" secondAttribute="bottom" constant="20" id="gK3-Wm-uAm"/>
+                            <constraint firstItem="a76-Vp-lJb" firstAttribute="top" secondItem="QBO-sv-9LG" secondAttribute="top" id="gPb-Fc-73Y"/>
+                            <constraint firstItem="oTp-R0-vnm" firstAttribute="bottom" secondItem="yr1-dU-ITX" secondAttribute="bottom" constant="20" id="gkH-ty-jaW"/>
+                            <constraint firstItem="yr1-dU-ITX" firstAttribute="top" secondItem="uIn-QE-pi1" secondAttribute="bottom" constant="30" id="kuN-ci-Vir"/>
+                            <constraint firstItem="a76-Vp-lJb" firstAttribute="trailing" secondItem="oTp-R0-vnm" secondAttribute="trailing" id="pH6-7q-BTF"/>
+                            <constraint firstItem="oTp-R0-vnm" firstAttribute="trailing" secondItem="uIn-QE-pi1" secondAttribute="trailing" constant="20" id="q0Z-ih-Lai"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="18k-vN-3b7"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="uIn-QE-pi1" id="uWc-BY-OUw"/>
+                        <outlet property="newsImage" destination="a76-Vp-lJb" id="JXL-vO-zSq"/>
+                        <outlet property="newsLabel" destination="yr1-dU-ITX" id="IQ0-1T-NnI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gh0-Y9-A5m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1092.753623188406" y="2.6785714285714284"/>
         </scene>
     </scenes>
     <resources>

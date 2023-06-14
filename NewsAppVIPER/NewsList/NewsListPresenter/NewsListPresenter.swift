@@ -11,7 +11,7 @@ class NewsListPresenter {
     
     weak var view: NewsListViewProtocol!
     var interactor: NewsListInteractorProtocol!
-//    var router: NewsListRouterProtocol!
+    var router: NewsListRouterProtocol!
     
     var news: [Articles] = []
     var newsCount: Int? {
@@ -37,7 +37,10 @@ extension NewsListPresenter: NewsListPresenterProtocol {
     }
     
     func showNewsDetails(for indexPath: IndexPath) {
-        
+        if news.indices.contains(indexPath.row) {
+            let news = news[indexPath.row]
+            router.openCourseDetailsViewController(with: news)
+        }
     }
 }
 
