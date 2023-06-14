@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol NewsDetailConfiguratorProtocol {
+protocol NewsDetailConfiguratorProtocol: AnyObject {
     func configure(with viewController: NewsDetailViewController, and news: Articles)
 }

@@ -31,7 +31,7 @@ extension NewsDetailPresenter: NewsDetailPresenterProtocol {
 extension NewsDetailPresenter: NewsDetailInteractorOutputProtocol {
     func recieveNewDetail(with newsDetailData: NewsDetailData) {
         view.setImage(with: newsDetailData.newsImage)
-        
+        view.setDate(with: newsDetailData.date)
         view.setText(with: newsDetailData.news)
     }
     

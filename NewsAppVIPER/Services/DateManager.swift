@@ -16,7 +16,7 @@ class DateManager {
     
     func dateFromString(with date: String?) -> String? {
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-        outputDateFormater.dateFormat = "dd, MM, YYYY"
+        outputDateFormater.dateFormat = "dd.MM.YYYY"
         if let date = dateFormatter.date(from: date ?? "") {
             let dateString = outputDateFormater.string(from: date)
             return dateString

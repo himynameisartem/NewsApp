@@ -18,6 +18,7 @@ class NewsListCell: UITableViewCell {
     
     func configure(news: Articles) {
         titleNewsLabel.text = news.title
+        dateNewsLabel.text = DateManager.shared.dateFromString(with: news.publishedAt)
         loadImageActivityIndicator.startAnimating()
         if let currentImageURL = currentImageURL, currentImageURL != news.urlToImage {
             ImageManager.shared.cancelImageLoading(for: currentImageURL)
