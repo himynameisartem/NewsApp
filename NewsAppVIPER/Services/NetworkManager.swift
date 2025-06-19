@@ -12,7 +12,7 @@ class NetworkManager {
     
     static let shared = NetworkManager()
     
-    private let url = "https://newsapi.org/v2/everything?q=football&from=2023-06-06&sortBy=popularity&apiKey=cde9b0cd48c947d2b6d955d2bff69733"
+    private let url = "https://newsapi.org/v2/everything?q=football&apiKey=cde9b0cd48c947d2b6d955d2bff69733"
     
     func fetchNews(complition: @escaping (_ news: [Articles])-> Void) {
         AF.request(url).response { responce in
