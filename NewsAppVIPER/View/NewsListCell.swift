@@ -9,10 +9,11 @@ import UIKit
 
 class NewsListCell: UITableViewCell {
     
-    @IBOutlet var newsImageView: UIImageView!
-    @IBOutlet var titleNewsLabel: UILabel!
-    @IBOutlet var dateNewsLabel: UILabel!
-    @IBOutlet var loadImageActivityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var newsImageView: UIImageView!
+    @IBOutlet weak var titleNewsLabel: UILabel!
+    @IBOutlet weak var dateNewsLabel: UILabel!
+    @IBOutlet weak var sourceNewsLabel: UILabel!
+    @IBOutlet weak var loadImageActivityIndicator: UIActivityIndicatorView!
     
     private var currentImageURL: String?
     

@@ -7,9 +7,14 @@
 
 import UIKit
 
-class NewsListViewController: UIViewController {
+protocol NewsListViewProtocol: AnyObject {
+    func reloadData()
+}
 
-    @IBOutlet var newsListTableView: UITableView!
+class NewsListViewController: UIViewController {
+    
+
+    @IBOutlet weak var newsListTableView: UITableView!
     let selfToNewsDetailSegueName = "ShowDetail"
     
     var presenter: NewsListPresenterProtocol!
@@ -17,9 +22,7 @@ class NewsListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        newsListTableView.register(UINib(nibName: "NewsListCell", bundle: nil), forCellReuseIdentifier: "cell")
-        
+        configureUI()
         configurator.configure(with: self)
         presenter.viewDidLoad()
     }
@@ -33,6 +36,10 @@ class NewsListViewController: UIViewController {
         }
     }
     
+    private func configureUI() {
+        newsListTableView.register(UINib(nibName: "NewsListCell", bundle: nil), forCellReuseIdentifier: "cell")
+    }
+    
 }
 
 extension NewsListViewController: UITableViewDelegate, UITableViewDataSource {
@@ -42,11 +49,8 @@ extension NewsListViewController: UITableViewDelegate, UITableViewDataSource {
         
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! NewsListCell
-        
         guard let news = presenter.news(atIndex: indexPath) else { return cell }
-        
         cell.configure(news: news)
-        
         return cell
     }
     

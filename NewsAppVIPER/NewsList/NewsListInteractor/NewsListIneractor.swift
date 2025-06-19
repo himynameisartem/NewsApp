@@ -7,6 +7,14 @@
 
 import Foundation
 
+protocol NewsListInteractorProtocol: AnyObject {
+    func fetchNews()
+}
+
+protocol NewsListInteractorOutputProtocol: AnyObject {
+    func newsDidRecieve(_ news: [Articles])
+}
+
 class NewsListInteractor {
     
     weak var presenter: NewsListInteractorOutputProtocol!

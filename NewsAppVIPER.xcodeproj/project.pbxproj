@@ -31,7 +31,6 @@
 		31762C7E2A31E9EA00651F7D /* NewsListIneractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31762C7D2A31E9EA00651F7D /* NewsListIneractor.swift */; };
 		31762C802A31EA1800651F7D /* NewsListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31762C7F2A31EA1800651F7D /* NewsListRouter.swift */; };
 		31762C822A31EA2300651F7D /* NewsListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31762C812A31EA2300651F7D /* NewsListConfigurator.swift */; };
-		31762C842A31EA3A00651F7D /* NewsListViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31762C832A31EA3A00651F7D /* NewsListViewControllerProtocol.swift */; };
 		31762C872A31EB5400651F7D /* NewsListPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31762C862A31EB5400651F7D /* NewsListPresenterProtocol.swift */; };
 		31762C8A2A31ED2300651F7D /* NewsListInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31762C892A31ED2300651F7D /* NewsListInteractorProtocol.swift */; };
 		31762C8D2A31F10C00651F7D /* NewsListConfiguratorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31762C8C2A31F10C00651F7D /* NewsListConfiguratorProtocol.swift */; };
@@ -67,7 +66,6 @@
 		31762C7D2A31E9EA00651F7D /* NewsListIneractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListIneractor.swift; sourceTree = "<group>"; };
 		31762C7F2A31EA1800651F7D /* NewsListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListRouter.swift; sourceTree = "<group>"; };
 		31762C812A31EA2300651F7D /* NewsListConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListConfigurator.swift; sourceTree = "<group>"; };
-		31762C832A31EA3A00651F7D /* NewsListViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewControllerProtocol.swift; sourceTree = "<group>"; };
 		31762C862A31EB5400651F7D /* NewsListPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListPresenterProtocol.swift; sourceTree = "<group>"; };
 		31762C892A31ED2300651F7D /* NewsListInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListInteractorProtocol.swift; sourceTree = "<group>"; };
 		31762C8C2A31F10C00651F7D /* NewsListConfiguratorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListConfiguratorProtocol.swift; sourceTree = "<group>"; };
@@ -241,7 +239,6 @@
 			isa = PBXGroup;
 			children = (
 				31762C5D2A30FBA800651F7D /* NewsListViewController.swift */,
-				31762C832A31EA3A00651F7D /* NewsListViewControllerProtocol.swift */,
 			);
 			path = NewsListViewController;
 			sourceTree = "<group>";
@@ -423,7 +420,6 @@
 				314F46562A39B1C5007528C6 /* NewsDetailInteractor.swift in Sources */,
 				31762C7C2A31E9DA00651F7D /* NewsListPresenter.swift in Sources */,
 				31762C902A31F44B00651F7D /* ImageManager.swift in Sources */,
-				31762C842A31EA3A00651F7D /* NewsListViewControllerProtocol.swift in Sources */,
 				31762C8D2A31F10C00651F7D /* NewsListConfiguratorProtocol.swift in Sources */,
 				31762C802A31EA1800651F7D /* NewsListRouter.swift in Sources */,
 				31762C5A2A30FBA800651F7D /* AppDelegate.swift in Sources */,
