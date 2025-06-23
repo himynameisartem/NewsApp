@@ -13,6 +13,10 @@ struct NewsDetailData {
     let news: String?
 }
 
+protocol NewsDetailPresenterProtocol: AnyObject {
+    func showDetailNews()
+}
+
 class NewsDetailPresenter {
     weak var view: NewsDetailViewController!
     var interactor: NewsDetailInteractorProtocol!

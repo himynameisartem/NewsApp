@@ -7,6 +7,14 @@
 
 import Foundation
 
+protocol NewsDetailInteractorProtocol: AnyObject {
+    func provideNewsDetail()
+}
+
+protocol NewsDetailInteractorOutputProtocol: AnyObject {
+    func recieveNewDetail(with newsDetailData: NewsDetailData)
+}
+
 class NewsDetailInteractor {
     
     weak var presentor: NewsDetailInteractorOutputProtocol!

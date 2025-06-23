@@ -7,6 +7,10 @@
 
 import Foundation
 
+protocol NewsListRouterProtocol: AnyObject {
+    func openCourseDetailsViewController(with news: Articles)
+}
+
 class NewsListRouter {
     
     weak var viewController: NewsListViewController!

@@ -7,11 +7,17 @@
 
 import UIKit
 
+protocol NewsDetailViewControllerProtocol {
+    func setImage(with imageString: String?)
+    func setDate(with date: String?)
+    func setText(with text: String?)
+}
+
 class NewsDetailViewController: UIViewController {
     
-    @IBOutlet var newsImage: UIImageView!
-    @IBOutlet var dateLabel: UILabel!
-    @IBOutlet var newsLabel: UILabel!
+    @IBOutlet weak var newsImage: UIImageView!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var newsLabel: UILabel!
     
     var presenter: NewsDetailPresenterProtocol!
     

@@ -7,6 +7,10 @@
 
 import Foundation
 
+protocol NewsListConfiguratorProtocol: AnyObject {
+    func configure(with viewController: NewsListViewController)
+}
+
 class NewsListCofigurator: NewsListConfiguratorProtocol {
     
     func configure(with viewController: NewsListViewController) {

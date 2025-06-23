@@ -7,6 +7,10 @@
 
 import Foundation
 
+protocol NewsDetailConfiguratorProtocol: AnyObject {
+    func configure(with viewController: NewsDetailViewController, and news: Articles)
+}
+
 class NewsDetailConfigurator: NewsDetailConfiguratorProtocol {
     func configure(with viewController: NewsDetailViewController, and news: Articles) {
         let presenter = NewsDetailPresenter(view: viewController)
