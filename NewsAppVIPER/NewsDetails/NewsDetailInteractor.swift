@@ -27,11 +27,12 @@ class NewsDetailInteractor {
 }
 
 extension NewsDetailInteractor: NewsDetailInteractorProtocol {
-    
     func provideNewsDetail() {
-        let newsDetailData = NewsDetailData(newsImage: news.urlToImage,
-                                            date: DateManager.shared.dateFromString(with: news.publishedAt),
-                                            news: news.description)
-        presentor.recieveNewDetail(with: newsDetailData)
+        ImageManager.shared.loadImageFromURL(urlString: news.urlToImage) { data in
+            let newsDetailData = NewsDetailData(newsImageData: data,
+                                            date: DateManager.shared.dateFromString(with: self.news.publishedAt),
+                                            news: self.news.description)
+            self.presentor.recieveNewDetail(with: newsDetailData)
+        }
     }
 }

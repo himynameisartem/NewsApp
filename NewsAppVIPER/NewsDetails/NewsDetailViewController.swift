@@ -8,7 +8,7 @@
 import UIKit
 
 protocol NewsDetailViewControllerProtocol {
-    func setImage(with imageString: String?)
+    func setImage(with imageData: Data)
     func setDate(with date: String?)
     func setText(with text: String?)
 }
@@ -23,20 +23,14 @@ class NewsDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         presenter.showDetailNews()
-        
     }
 }
 
 extension NewsDetailViewController: NewsDetailViewControllerProtocol {
     
-    func setImage(with imageString: String?) {
-        ImageManager.shared.loadImageFromURL(urlString: imageString ?? "") { image in
-            DispatchQueue.main.async {
-                self.newsImage.image = image
-            }
-        }
+    func setImage(with imageData: Data) {
+        newsImage.image = UIImage(data: imageData)
     }
     
     func setDate(with date: String?) {

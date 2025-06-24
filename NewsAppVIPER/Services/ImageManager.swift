@@ -12,31 +12,14 @@ class ImageManager {
     static let shared = ImageManager()
     private var imageLoadTasks: [URLSessionDataTask] = []
     
-    func loadImageFromURL(urlString: String, completion: @escaping (UIImage?) -> Void) {
-        if urlString != "" {
-            guard let url = URL(string: urlString) else {
-                completion(nil)
-                return
-            }
-            if imageLoadTasks.first(where: { $0.originalRequest?.url?.absoluteString == urlString }) != nil {
-                completion(nil)
-                return
-            }
-            let task = URLSession.shared.dataTask(with: url) { data, response, error in
-                if let index = self.imageLoadTasks.firstIndex(where: { $0.originalRequest?.url?.absoluteString == urlString }) {
-                    self.imageLoadTasks.remove(at: index)
+    func loadImageFromURL(urlString: String?, completion: @escaping (Data) -> Void) {
+        DispatchQueue.global().async {
+            guard let urlString = urlString else { return }
+            if let data = try? Data(contentsOf: URL(string: urlString)!) {
+                DispatchQueue.main.async {
+                    completion(data)
                 }
-                guard let data = data, let image = UIImage(data: data) else {
-                    completion(nil)
-                    return
-                }
-                completion(image)
             }
-            imageLoadTasks.append(task)
-            task.resume()
-        } else {
-            let image = UIImage(named: "emptyImage")
-            completion(image)
         }
     }
     

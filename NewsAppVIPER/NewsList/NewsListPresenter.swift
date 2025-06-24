@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Alamofire
 
 protocol NewsListPresenterProtocol: AnyObject {
     var news: [Articles] { get }
@@ -26,7 +27,7 @@ class NewsListPresenter {
         news.count
     }
     
-    required init(view: NewsListViewProtocol) {
+    init(view: NewsListViewProtocol) {
         self.view = view
     }
 }
@@ -57,4 +58,18 @@ extension NewsListPresenter: NewsListInteractorOutputProtocol {
         self.news = news
         view.reloadData()
     }
+    
+    func handleError(_ error: any Error) {
+        var errorMessage: String
+        switch error {
+        case is DecodingError:
+            errorMessage = "Data loading error. Try it later."
+        case let afError as AFError:
+            errorMessage = afError.localizedDescription
+        default:
+            errorMessage = "Unknown error"
+        }
+        view.showError(errorMessage)
+    }
 }
+

@@ -9,6 +9,7 @@ import UIKit
 
 protocol NewsListViewProtocol: AnyObject {
     func reloadData()
+    func showError(_ message: String)
 }
 
 class NewsListViewController: UIViewController {
@@ -64,6 +65,14 @@ extension NewsListViewController: NewsListViewProtocol {
     func reloadData() {
         DispatchQueue.main.async {
             self.newsListTableView.reloadData()
+        }
+    }
+    
+    func showError(_ message: String) {
+        DispatchQueue.main.async {
+            let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alertController, animated: true)
         }
     }
 }

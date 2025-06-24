@@ -8,7 +8,7 @@
 import Foundation
 
 struct NewsDetailData {
-    let newsImage: String?
+    let newsImageData: Data?
     let date: String?
     let news: String?
 }
@@ -34,9 +34,10 @@ extension NewsDetailPresenter: NewsDetailPresenterProtocol {
 
 extension NewsDetailPresenter: NewsDetailInteractorOutputProtocol {
     func recieveNewDetail(with newsDetailData: NewsDetailData) {
-        view.setImage(with: newsDetailData.newsImage)
         view.setDate(with: newsDetailData.date)
         view.setText(with: newsDetailData.news)
+        guard let imageData = newsDetailData.newsImageData else { return }
+        view.setImage(with: imageData)
     }
     
     

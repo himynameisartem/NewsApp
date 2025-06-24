@@ -21,32 +21,13 @@ class NewsListCell: UITableViewCell {
         titleNewsLabel.text = news.title
         dateNewsLabel.text = DateManager.shared.dateFromString(with: news.publishedAt)
         loadImageActivityIndicator.startAnimating()
-        if let currentImageURL = currentImageURL, currentImageURL != news.urlToImage {
-            ImageManager.shared.cancelImageLoading(for: currentImageURL)
-        }
-        currentImageURL = news.urlToImage
         newsImageView.image = nil
-        ImageManager.shared.loadImageFromURL(urlString: news.urlToImage ?? "") { [weak self] image in
+        
+        ImageManager.shared.loadImageFromURL(urlString: news.urlToImage) { [ weak self ] data in
             DispatchQueue.main.async {
-                if let self = self, self.currentImageURL == news.urlToImage {
-                    self.newsImageView.image = image
-                    self.loadImageActivityIndicator.stopAnimating()
-                }
+                self?.newsImageView.image = UIImage(data: data)
+                self?.loadImageActivityIndicator.stopAnimating()
             }
         }
     }
-    
-    
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-    }
-    
-    
 }
