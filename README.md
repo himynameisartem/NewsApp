@@ -1,76 +1,113 @@
-#  NewsApp
+# NewsApp
 
-    NewsApp is an iOS application that allows users to read sports news articles. It follows the VIPER architecture pattern and utilizes Alamofire for network requests. The project includes both Storyboard and XIB files for building the user interface.
+**NewsApp** is an iOS application that displays news using data fetched from the internet.  
+The app is built using the **VIPER architecture**, utilizes **Alamofire** for networking, and employs a combination of **Storyboard** and **XIBs** for building a clean and responsive user interface.
 
 ## Features
 
-        *View a list of sports news articles
-        
-        *Read detailed information about each article
+- Browse the latest news articles
+- Read detailed article content on a separate screen
+- Clean, simple UI with support for reusable components
+- Separation of concerns using VIPER
 
-        *Save favorite articles for offline reading
+## Architecture
+
+The project is implemented using **VIPER**, which separates the app into five layers:
+
+- **View** – Displays the UI and handles user interaction
+- **Interactor** – Contains business logic and data manipulation
+- **Presenter** – Connects Interactor and View, formats data
+- **Entity** – Represents data models
+- **Router** – Manages navigation
+
+This architecture improves testability, scalability, and code clarity.
+
+## Networking
+
+- Networking is handled using **Alamofire**, a powerful and modern HTTP networking library in Swift.
+- The app fetches news data from a public news API (can be easily swapped or extended).
+- JSON parsing is cleanly decoupled from the UI layer.
+
+## Technologies
+
+- **Swift**
+- **VIPER architecture**
+- **Alamofire** – HTTP networking
+- **Storyboard + XIB** – UI layout
+- **CocoaPods** – Dependency management
+- **MVC-to-VIPER** experience transition
 
 ## Installation
 
-    1. Clone the repository:
-        git clone https://github.com/himynameisartem/NewsAppVIPER
+1. Clone the repository:
+   git clone https://github.com/himynameisartem/NewsAppVIPER
+   
+2. Install dependencies via CocoaPods:
+   pod install
 
-    2. Install dependencies using CocoaPods. In the project directory, run:
-        pod install
+3. Open the .xcworkspace file in Xcode:
+   open NewsApp.xcworkspace
 
-    3. Open the NewsApp.xcodeproj file in Xcode.
-
-    4. Build and run the project in Xcode.
-
-## Dependencies
-
-    The project uses the following external libraries:
-
-    *Alamofire: A Swift-based HTTP networking library for making network requests.
-The dependencies are managed with CocoaPods. Make sure to install the dependencies before building the project.
+4. Build and run the project.
 
 ## Contact
 
-    If you have any questions, suggestions, or issues, please contact me at himynameisartem@icloud.com
-
-
-
-
-
-
+If you have any questions, suggestions or feedback, feel free to contact me:
+📧 himynameisartem@icloud.com
 
 
 # NewsApp
 
-    NewsApp - это приложение для iOS, которое позволяет пользователям читать новостные статьи о спорте. Оно использует архитектурный паттерн VIPER и Alamofire для сетевых запросов. В проекте используются как Storyboard, так и файлы XIB для создания пользовательского интерфейса.
+**NewsApp** — это iOS-приложение, отображающее новости, получаемые из сети.  
+Проект построен на архитектуре **VIPER**, использует **Alamofire** для работы с сетью и сочетает **Storyboard** и **XIB-файлы** для создания гибкого и понятного интерфейса.
 
-## Функциональность
+## Возможности
 
-        *Просмотр списка новостных статей о спорте
-        
-        *Чтение подробной информации о каждой статье
+- Просмотр свежих новостей
+- Детальный просмотр статьи на отдельном экране
+- Чистый интерфейс с переиспользуемыми компонентами
+- Разделение логики по слоям благодаря архитектуре VIPER
 
-        *Сохранение избранных статей для офлайн-чтения
+## Архитектура
+
+Архитектура **VIPER** разбивает проект на 5 логических компонентов:
+
+- **View** — отображение интерфейса и обработка взаимодействия
+- **Interactor** — бизнес-логика и обработка данных
+- **Presenter** — связывает Interactor и View, форматирует данные
+- **Entity** — модели данных
+- **Router** — отвечает за навигацию
+
+Такой подход повышает читаемость кода, масштабируемость и тестируемость.
+
+## Сетевое взаимодействие
+
+- Все сетевые запросы выполняются через библиотеку **Alamofire**
+- Загружаются новости с публичного новостного API
+- Парсинг JSON изолирован от слоя интерфейса
+
+## Технологии
+
+- **Swift**
+- **VIPER**
+- **Alamofire** — сетевые запросы
+- **Storyboard и XIB** — построение интерфейса
+- **CocoaPods** — управление зависимостями
 
 ## Установка
 
-    1. Клонируйте репозиторий:
-        git clone https://github.com/himynameisartem/NewsAppVIPER
-    
-    2. Установите зависимости с помощью CocoaPods. В директории проекта выполните следующую команду:
-        pod install
+1. Клонируйте репозиторий:
+   git clone https://github.com/himynameisartem/NewsAppVIPER
 
-    3. Откройте файл NewsApp.xcodeproj в Xcode.
+2. Установите зависимости через CocoaPods:
+   pod install
 
-    4.Соберите и запустите проект в Xcode.
+3. Откройте .xcworkspace файл в Xcode:
+   open NewsApp.xcworkspace
 
-## Зависимости
-
-    В проекте используются следующие внешние библиотеки:
-
-    *Alamofire: Библиотека для сетевых запросов на основе Swift.
-Зависимости управляются с помощью CocoaPods. Убедитесь, что вы установили все зависимости перед сборкой проекта.
+4. Соберите и запустите проект.
 
 ## Связь
 
-    Если у вас возникли вопросы, предложения или проблемы, свяжитесь со мной по адресу himynameisartem@icloud.com
+Если у вас есть вопросы, предложения или фидбек, напишите мне:
+📧 himynameisartem@icloud.com
